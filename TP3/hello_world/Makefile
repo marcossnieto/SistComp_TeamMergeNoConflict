@@ -16,11 +16,11 @@ $(BUILD)/main.img: $(BUILD)/main.o link.ld
 
 # Ejecuta QEMU
 run: $(BUILD)/main.img
-	qemu-system-x86_64 -hda $<
+	qemu-system-i386 -hda $<
 
 # Ejecuta QEMU pausado para GDB
 debug: $(BUILD)/main.img
-	qemu-system-x86_64 -hda $< -s -S
+	qemu-system-i386 -hda $< -s -S
 
 # Limpia los binarios generados
 clean:
